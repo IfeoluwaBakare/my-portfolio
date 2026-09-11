@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ifeoluwa Bakare | Data &amp; Business Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#FAF8F5; --cream:#F0E6DE; --ink:#1A1613; --line:#DDD6CC; --line-strong:#1A1613; --burnt:#C1502E; --burnt-dark:#99401F; --dim:#6B645C; --max-width:920px; }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;line-height:1.6;font-size:16px}
+  h1,h2,h3{font-family:'Roboto Slab',serif;margin:0;color:var(--ink)} a{color:var(--burnt-dark)}
+  .wrap{max-width:var(--max-width);margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line-strong);padding:20px 0}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .brand{font-family:'Roboto Slab',serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em}
+  nav a{color:var(--dim);text-decoration:none;margin-left:24px;font-size:.92rem} nav a:hover{color:var(--burnt)}
+  .hero{display:flex;min-height:460px;border-bottom:1px solid var(--line-strong)}
+  .hero-side{flex:0 0 380px;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;border-right:2px solid var(--ink)}
+  .hero-side img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:3px solid var(--ink);margin-bottom:18px}
+  .hero-side h2{font-family:'Roboto Slab',serif;font-size:1.2rem;margin-bottom:6px;color:var(--ink)}
+  .hero-side .divider{width:40px;height:2px;background:var(--burnt);margin:10px auto}
+  .hero-side .role{color:var(--dim);font-size:.85rem}
+  .hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 56px;max-width:600px}
+  .hero-main .greet-hello{font-family:'Roboto Slab',serif;font-size:clamp(3rem,8vw,4.6rem);font-weight:800;line-height:1;color:var(--ink)}
+  .hero-main .greet-name{font-family:'Roboto Slab',serif;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2;color:var(--ink);margin-top:4px}
+  .hero-main .greet-name span{color:var(--burnt)}
+  .hero-main .name{font-size:1.1rem;color:var(--dim);margin-top:14px}
+  .hero-main .name b{color:var(--ink)}
+  .hero-cta-row{margin-top:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .hero-cta,.hero-link{text-decoration:none;border-bottom:1px solid var(--burnt);padding-bottom:2px;font-size:.95rem;color:var(--burnt-dark)}
+  .hero-main p.intro{margin-top:24px;color:var(--dim);font-size:1rem;max-width:48ch}
+  @media(max-width:700px){.hero{flex-direction:column}.hero-side{flex:none;border-right:none;border-bottom:2px solid var(--ink)}.hero-main{padding:36px 24px}}
+  .stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);margin:44px 0 0}
+  .stat{flex:1;min-width:140px;padding:22px 24px;border-left:1px solid var(--line)}.stat:first-child{border-left:none}
+  .stat .num{font-family:'Roboto Slab',serif;font-size:1.35rem;color:var(--burnt);font-weight:600}.stat .label{color:var(--dim);font-size:.8rem;margin-top:4px}
+  .section{padding:60px 0;border-bottom:1px solid var(--line-strong)}.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+  .section-head .idx{font-family:'IBM Plex Mono',monospace;color:var(--burnt);font-size:.82rem}.section-head h2{font-size:1.45rem}
+  .about{max-width:760px}.about p{color:var(--dim);font-size:1rem;margin:0 0 18px}.about p:last-child{margin-bottom:0}.about strong{color:var(--ink);font-weight:600}
+  .spec-row{display:grid;grid-template-columns:90px 1fr;border-top:1px solid var(--line);padding:24px 0;gap:20px}.spec-row:last-child{border-bottom:1px solid var(--line)}
+  .spec-num{font-family:'Roboto Slab',serif;font-size:1rem;color:var(--burnt);font-weight:700}.spec-content h3{font-size:1.12rem;margin-bottom:6px}
+  .spec-content .meta{color:var(--dim);font-size:.85rem;margin-bottom:10px}.spec-content p{color:var(--dim);font-size:.98rem;margin:0;max-width:62ch}
+  .status-tag{display:inline-block;margin-top:10px;font-size:.72rem;font-family:'IBM Plex Mono',monospace;border:1px solid var(--burnt);color:var(--burnt-dark);padding:3px 10px}
+  .tag-row{display:flex;gap:10px;flex-wrap:wrap}.tag{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--burnt-dark);border:1px solid var(--burnt-dark);padding:4px 10px}
+  .project{border:1px solid var(--line-strong);margin-bottom:24px}.project-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:26px 28px 0;flex-wrap:wrap}
+  .project h3{font-size:1.25rem}.project .role{color:var(--dim);font-size:.9rem;margin-top:6px}.project .tag-row{padding:0 28px;margin-top:18px}
+  .project-body{padding:20px 28px 24px;color:var(--dim);font-size:.98rem}.project-body p{margin:0 0 14px}.project-body ul{margin:0 0 14px;padding-left:20px}.project-body li{margin-bottom:6px}.project-body strong{color:var(--ink)}
+  .project-links{padding:0 28px 26px;display:flex;gap:18px}.project-links a{font-size:.9rem;text-decoration:none;border-bottom:1px solid var(--burnt)}
+  .status-badge{font-family:'IBM Plex Mono',monospace;font-size:.72rem;padding:4px 10px;white-space:nowrap}.status-live{color:var(--burnt-dark);border:1px solid var(--burnt-dark)}
+  .status-pending{color:var(--dim);border:1px solid var(--line)}.pending-note{padding:18px 28px 26px;color:var(--dim);font-size:.9rem;font-style:italic;border-top:1px dashed var(--line);margin-top:4px}
+  .metric-row{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0 18px}.metric{border-left:2px solid var(--burnt);padding-left:12px}
+  .metric .m-num{font-family:'Roboto Slab',serif;font-size:1.15rem;color:var(--ink);font-weight:600}.metric .m-label{font-size:.8rem;color:var(--dim)}
+  .shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 28px 8px}
+  .shot-grid img{width:100%;display:block;border:1px solid var(--line-strong)}
+  .shot-grid .full{grid-column:1 / -1}
+  .shot-caption{padding:0 28px 24px;color:var(--dim);font-size:.82rem;font-style:italic}
+  footer{padding:40px 0 60px;color:var(--dim);font-size:.88rem}
+  @media(max-width:640px){.hero{padding-top:48px}.spec-row{grid-template-columns:55px 1fr;gap:14px}nav a{margin-left:14px}.stat{min-width:50%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">IFEOLUWA BAKARE</div>
+    <nav>
+      <a href="#about">About</a><a href="#path">Path</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-side">
+    <img src="images/profile.jpg" alt="Ifeoluwa Bakare">
+    <h2>Ifeoluwa Bakare</h2>
+    <div class="divider"></div>
+    <div class="role">Business Intelligence &amp; Data Analyst</div>
+  </div>
+  <div class="hero-main">
+    <div class="greet-hello">Hello,</div>
+    <div class="greet-name">I'm <span>Ife.</span></div>
+    <div class="name">Business Insights &amp; Analytics student at <b>Humber Polytechnic</b></div>
+    <div class="hero-cta-row">
+      <a class="hero-cta" href="#work">Projects</a>
+      <a class="hero-link" href="https://linkedin.com/in/ifeoluwa-bakare" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="hero-link" href="#contact">Get in touch</a>
+    </div>
+    <p class="intro">I turn messy problems into clear, data-backed decisions, using SQL, Python, Power BI, and cloud platforms, with a chemical engineering foundation underneath it all.</p>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head"><span class="idx">ABOUT</span><h2>A little about me</h2></div>
+    <div class="about">
+      <p>
+        I came to Canada with a Chemical Engineering background, built a management career at
+        McDonald's within ten months, and later moved into Business Insights &amp; Analytics at Humber
+        Polytechnic.
+      </p>
+      <p>
+        My Chemical Engineering background gave me a foundation in rigorous, structured analysis,
+        which turned out to be a real advantage going into the BIA program. What was new was the
+        toolkit: SQL, Python, Power BI, and cloud platforms. I've since developed practical skills in
+        each by taking on what's unfamiliar and working through it.
+      </p>
+      <p>
+        Today, I enjoy working in the space where business, data, operations, and people meet:
+        understanding a problem, breaking it down, figuring out what the data is telling me, and
+        thinking about what can actually be done about it.
+      </p>
+      <p>
+        I'm reliable, adaptable, detail-oriented, and I see things through.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="path">
+  <div class="wrap">
+    <div class="section-head"><span class="idx">PATH</span><h2>How I got here</h2></div>
+    <div class="spec-row">
+      <div class="spec-num">01</div><div class="spec-content">
+        <h3>Chemical Engineering, University of Benin</h3><div class="meta">Nigeria</div>
+        <p>B.Eng, Chemical Engineering.</p>
+      </div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-num">02</div><div class="spec-content">
+        <h3>McDonald's</h3><div class="meta">Canada · Crew Member → Shift Manager, 10 months</div>
+        <p>People management, daily operations, standards under pressure.</p>
+      </div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-num">03</div><div class="spec-content">
+        <h3>Business Insights &amp; Analytics, Humber Polytechnic</h3>
+        <div class="meta">92.5 GPA · Honours standing, Winter &amp; Summer 2026</div>
+        <p>SQL, Python, Power BI, Azure, Databricks, all learned from zero.</p>
+        <span class="status-tag">IN PROGRESS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head"><span class="idx">SKILLS</span><h2>Toolkit</h2></div>
+    <div class="tag-row">
+      <span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Python</span>
+      <span class="tag">Azure</span><span class="tag">Databricks</span><span class="tag">Financial Statement Analysis</span><span class="tag">SWOT / Porter's Five Forces</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head"><span class="idx">WORK</span><h2>Selected Projects</h2></div>
+
+    <div class="project">
+      <div class="project-top"><div><h3>ArtsyTartsy: Cloud Database &amp; Full-Stack E-Commerce Build</h3><div class="role">Solo build · Cloud database coursework</div></div><span class="status-badge status-live">Complete</span></div>
+      <div class="tag-row"><span class="tag">Azure</span><span class="tag">MySQL Flexible Server</span><span class="tag">PHP</span><span class="tag">Linux VM</span><span class="tag">SSL/TLS</span></div>
+      <div class="project-body">
+        <p><strong>The problem:</strong> A small bakery business needed a way to manage customer orders, inventory, and sales in one system instead of pen and paper.</p>
+        <p><strong>What I built:</strong> An end-to-end e-commerce application on Azure with separate customer and staff workflows, backed by a MySQL database. Customers browse and order; staff manage inventory, orders, and sales from a live dashboard, all secured with HTTPS.</p>
+        <p><strong>The result:</strong> A working end-to-end system, orders placed by customers updated stock automatically, and staff could track daily revenue, sales trends, and top-selling products through the dashboard.</p>
+        <p>Infrastructure has since been decommissioned to control costs. Screenshots of the live build stand in for the link.</p>
+      </div>
+      <div class="shot-grid">
+        <img src="images/artsytartsy/at-landing.png" alt="ArtsyTartsy customer landing page with hero and Click to Order CTA">
+        <img src="images/artsytartsy/at-order-placed.png" alt="ArtsyTartsy order confirmation after checkout">
+        <img src="images/artsytartsy/at-staff-analytics.png" alt="ArtsyTartsy staff dashboard revenue analytics chart">
+        <img src="images/artsytartsy/at-database.png" alt="phpMyAdmin table structure for the ArtsyTartsy customers table">
+      </div>
+      <div class="shot-caption">Screenshots from the live build: customer storefront, checkout, staff analytics, and the underlying MySQL database structure.</div>
+      <div class="project-links"><a href="https://github.com/IfeoluwaBakare/artsytartsy-fullstack-app" target="_blank" rel="noopener">View the code →</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-top"><div><h3>RFM Customer Segmentation</h3><div class="role">Coursework · Databricks (PySpark + SQL)</div></div><span class="status-badge status-live">Complete</span></div>
+      <div class="tag-row"><span class="tag">Databricks</span><span class="tag">PySpark</span><span class="tag">SQL</span><span class="tag">AWS S3</span><span class="tag">Lakeview Dashboard</span></div>
+      <div class="project-body">
+        <p><strong>The problem:</strong> The business needed to understand which customers were worth retaining and which were at risk of becoming inactive.</p>
+        <p><strong>What I did:</strong> Analyzed over 30,000 sales transactions using SQL and PySpark in Databricks, scoring each customer on recency, frequency, and monetary value, then grouped them into ten segments to guide marketing decisions.</p>
+        <p><strong>What I found:</strong> 47% of customers were dormant, while only 55 were newly acquired, pointing toward a stronger opportunity in customer reactivation than acquisition.</p>
+        <div class="metric-row">
+          <div class="metric"><div class="m-num">47%</div><div class="m-label">Customers Dormant</div></div>
+          <div class="metric"><div class="m-num">7,060</div><div class="m-label">Customers At Risk</div></div>
+          <div class="metric"><div class="m-num">55</div><div class="m-label">New Customers</div></div>
+        </div>
+      </div>
+      <div class="shot-grid">
+        <img src="images/rfm/rfm-dashboard-2.png" alt="RFM dashboard: recency, frequency, and monetary score distributions">
+        <img src="images/rfm/rfm-dashboard-4.png" alt="RFM dashboard: customer segment breakdown and monetary-by-recency scatter">
+        <img class="full" src="images/rfm/rfm-dashboard-5.png" alt="RFM dashboard: full customer data table with segment labels">
+      </div>
+      <div class="shot-caption">Screenshots from the live Databricks Lakeview dashboard built on top of the segmentation.</div>
+      <div class="project-links"><a href="https://nbviewer.org/github/IfeoluwaBakare/rfm-segmentation/blob/main/rfm_segmentation.ipynb" target="_blank" rel="noopener">View the notebook →</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-top"><div><h3>Coca-Cola vs. PepsiCo: Financial Ratio Analysis</h3><div class="role">Managerial accounting coursework</div></div><span class="status-badge status-live">Complete</span></div>
+      <div class="tag-row"><span class="tag">Financial Statement Analysis</span><span class="tag">Liquidity Ratios</span><span class="tag">Profitability Ratios</span></div>
+      <div class="project-body">
+        <p><strong>The question:</strong> Which company, Coca-Cola or PepsiCo, showed stronger financial health based on its financial statements?</p>
+        <p><strong>What I did:</strong> Calculated and compared 14 ratios covering liquidity, leverage, efficiency, and profitability for both companies, then rebuilt the analysis as a linked Excel model so every ratio traces back to its source.</p>
+        <p><strong>What I found:</strong> The analysis favored Coca-Cola overall, with stronger liquidity, lower leverage, and higher profitability across several measures. PepsiCo led on inventory efficiency, but Coca-Cola's broader financial position was the stronger case.</p>
+        <div class="metric-row">
+          <div class="metric"><div class="m-num">1.46</div><div class="m-label">Coca-Cola current ratio</div></div>
+          <div class="metric"><div class="m-num">0.85</div><div class="m-label">PepsiCo current ratio</div></div>
+          <div class="metric"><div class="m-num">0.27</div><div class="m-label">Coca-Cola net profit margin</div></div>
+        </div>
+      </div>
+      <div class="shot-grid">
+        <img class="full" src="images/accounting/summary.png" alt="Spreadsheet summary tab: key metrics and conclusion for Coca-Cola vs PepsiCo">
+        <img class="full" src="images/accounting/inputs.png" alt="Spreadsheet inputs tab: raw balance sheet and income statement figures for both companies">
+        <img class="full" src="images/accounting/ratio-analysis.png" alt="Spreadsheet ratio analysis tab: all 14 ratios plus operating cash flow, computed with formulas">
+      </div>
+      <div class="shot-caption">Rebuilt as a working Excel model, formulas link every ratio back to the source figures across three tabs (Summary, Inputs, Ratio Analysis).</div>
+      <div class="project-links"><a href="https://github.com/IfeoluwaBakare/coca-cola-pepsico-analysis/blob/main/accounting_ratio_analysis.xlsx" target="_blank" rel="noopener">View the spreadsheet →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">Ifeoluwa Bakare, Business Insights &amp; Analytics, Humber Polytechnic · <a href="https://linkedin.com/in/ifeoluwa-bakare" target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+</body>
+</html>
